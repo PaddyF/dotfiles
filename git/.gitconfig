@@ -1,0 +1,47 @@
+[user]
+	name = Paddy Flynn
+	email = patrick.flynn.94@gmail.com
+
+[core]
+	pager = delta
+	editor = nvim
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[rerere]
+	enabled = true
+
+[delta]
+	navigate = true
+	dark = true
+	syntax-theme = Catppuccin Mocha
+	side-by-side = true
+	line-numbers = true
+
+[interactive]
+	diffFilter = delta --color-only
+
+[merge]
+	conflictstyle = zdiff3
+
+[diff]
+	colorMoved = default
+
+[alias]
+	s = status
+	co = checkout
+	sw = switch
+	br = branch
+	ci = commit
+	lg = log --graph --oneline --decorate --all -20
+	amend = commit --amend --no-edit
+	unstage = reset HEAD --
+	last = log -1 HEAD --stat
+	wip = !git add -A && git commit -m 'WIP'

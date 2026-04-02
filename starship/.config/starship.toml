@@ -1,0 +1,41 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$python\
+$swift\
+$cmd_duration\
+$line_break\
+$character"""
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold lavender"
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "bold mauve"
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+style = "bold red"
+
+[python]
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+symbol = " "
+style = "yellow"
+
+[swift]
+format = "[$symbol($version )]($style)"
+symbol = " "
+style = "bold #F05138"
+
+[cmd_duration]
+min_time = 2000
+format = "[$duration]($style) "
+style = "yellow"
+
+[character]
+success_symbol = "[>](bold green)"
+error_symbol = "[>](bold red)"

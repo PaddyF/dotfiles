@@ -1,0 +1,9 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.lang.swift"
+  ],
+  "news": {
+    "NEWS.md": ""
+  },
+  "version": 7
+}
