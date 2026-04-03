@@ -25,6 +25,9 @@ style = "bold red"
 format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
 symbol = " "
 style = "yellow"
+detect_extensions = []
+detect_files = []
+detect_folders = []
 
 [swift]
 format = "[$symbol($version )]($style)"
