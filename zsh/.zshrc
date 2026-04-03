@@ -52,6 +52,7 @@ alias gco="git checkout"
 alias gsw="git switch"
 alias gb="git branch"
 alias lg="lazygit"
+alias cheat="bat ~/dotfiles/CHEATSHEET.md"
 alias ..="cd .."
 alias ...="cd ../.."
 
