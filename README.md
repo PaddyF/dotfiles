@@ -24,6 +24,9 @@ brew install neovim tmux starship git-delta stow
 # Shell enhancements
 brew install fzf bat ripgrep zoxide eza fd tldr lazygit btop
 
+# Extras
+brew install jrnl cbonsai
+
 # Font
 brew install --cask font-jetbrains-mono-nerd-font
 ```
@@ -35,7 +38,7 @@ brew install --cask font-jetbrains-mono-nerd-font
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # 2. Install all tools
-brew install neovim tmux starship git-delta stow fzf bat ripgrep zoxide eza fd tldr lazygit btop
+brew install neovim tmux starship git-delta stow fzf bat ripgrep zoxide eza fd tldr lazygit btop jrnl cbonsai
 brew install --cask font-jetbrains-mono-nerd-font
 
 # 3. Clone and stow

@@ -108,6 +108,8 @@ Leader key: `Space`
 | `tldr` | `tldr tar` | Simplified man pages |
 | `btop` | `btop` | System monitor |
 | `lazygit` / `lg` | `lg` | Terminal git UI |
+| `jrnl` | `jrnl today: note` | Command-line journal |
+| `cbonsai` | `cbonsai -l` | ASCII bonsai tree (live / screensaver) |
 
 ## Shell Functions
 
