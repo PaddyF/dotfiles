@@ -1,9 +1,28 @@
 # --- Path ---
 export PATH="$HOME/.local/bin:$PATH"
 
+# --- History ---
+HISTFILE=~/.zsh_history
+HISTSIZE=50000
+SAVEHIST=50000
+setopt SHARE_HISTORY          # share across sessions
+setopt HIST_EXPIRE_DUPS_FIRST # expire dupes first
+setopt HIST_IGNORE_DUPS       # don't record dupes
+setopt HIST_IGNORE_SPACE      # skip commands starting with space
+setopt HIST_VERIFY            # expand history before executing
+setopt APPEND_HISTORY         # append, don't overwrite
+
+# --- Completion ---
+autoload -Uz compinit && compinit
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'  # case-insensitive
+zstyle ':completion:*' menu select                     # arrow-key menu
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
 # --- Tool initialization ---
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
+eval "$(atuin init zsh --disable-up)"
 
 # --- fzf ---
 source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
@@ -59,3 +78,7 @@ alias ...="cd ../.."
 # --- Functions ---
 mkcd() { mkdir -p "$1" && cd "$1"; }
 glog() { git log --graph --oneline --decorate --all "${@:---20}"; }
+
+# --- Zsh plugins (must be last) ---
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
